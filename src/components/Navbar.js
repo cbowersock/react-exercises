@@ -16,6 +16,9 @@ const Navbar = () =>{
             <li>
                 <Link to='/translator'>Translator</Link>
             </li>
+            <li>
+                <Link to='/articles'>News Articles API Call</Link>
+            </li>
         </ul>
       </nav>
     )

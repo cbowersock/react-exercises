@@ -7,6 +7,7 @@ import Home from "./components/Home";
 
 import TextEditor from "./components/TextEditor";
 import Translator from "./components/Translator";
+import Articles from "./components/Articles";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
                         }
                     />
                     <Route exact path="/texteditor" component={TextEditor}/>
+                    <Route exact path="/articles" component={Articles}/>
                 </Switch>
             </div>
         </div>

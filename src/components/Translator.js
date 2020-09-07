@@ -36,8 +36,7 @@ class Translator extends React.Component {
             <span>English:</span>
             <input 
               type="text" 
-              className="text-input" 
-              data-testid="text-input" 
+              className="text-input"
               onChange={this.handleChange} 
               name="input" 
               value={this.state.input}/>
@@ -46,8 +45,7 @@ class Translator extends React.Component {
             <span>Spanish:</span>
             <input 
               type="text" 
-              className="text-output" 
-              data-testid="text-output" 
+              className="text-output"
               readOnly 
               name="output" 
               value={this.state.output}

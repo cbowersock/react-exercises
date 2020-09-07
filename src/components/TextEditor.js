@@ -46,27 +46,23 @@ class TextEditor extends React.Component {
           <input 
             className="word-input" 
             type="text" 
-            data-testid="word-input"
             value={this.state.input}
             name="input"
             onChange={this.handleInput} 
             />
           <button 
-            data-testid="append-button"
             name="appendButton"
             onClick={this.handleAppend}
             disabled={this.state.input === ''}
             >Append</button>
           <button 
-            data-testid="undo-button"
             name="undoButton"
             onClick={this.handleUndo}
             disabled={this.state.display === '' || this.state.display === ' '}
             >Undo</button>
         </div>
         <div 
-          className="text-field" 
-          data-testid="text-field"
+          className="text-field"
           name="display"
           >{this.state.display}</div>
       </React.Fragment>

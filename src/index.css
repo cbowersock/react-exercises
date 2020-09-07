@@ -119,3 +119,11 @@ html, body {
   .navbar a:hover {
     color: var(--nav-a-hov-color);
   }
+
+  .pagination button {
+    margin-left: 0.5rem;
+  }
+  
+  .results {
+    margin-top: 1rem;
+  }
