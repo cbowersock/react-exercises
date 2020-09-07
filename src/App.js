@@ -8,10 +8,12 @@ import Home from "./components/Home";
 import TextEditor from "./components/TextEditor";
 import Translator from "./components/Translator";
 import Articles from "./components/Articles";
+import EmployeesList from "./components/EmployeesList"
+
+import {TRANSLATIONS, EMPLOYEES} from "./dummyData"
 
 class App extends Component {
   render() {
-    const { translations } = this.props;
     return (
       <Router>
         <div className="App">
@@ -24,7 +26,16 @@ class App extends Component {
                         path="/translator"
                         render={ () =>
                         <Fragment>
-                            <Translator translations={translations}/>                        
+                            <Translator translations={TRANSLATIONS}/>                        
+                        </Fragment>
+                        }
+                    />
+                    <Route
+                        exact
+                        path="/employees"
+                        render={ () =>
+                        <Fragment>
+                            <EmployeesList employees={EMPLOYEES}/>                        
                         </Fragment>
                         }
                     />

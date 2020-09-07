@@ -46,7 +46,6 @@ class Articles extends React.Component {
 		for (let i = 0; i < this.state.totalPages; i++) {
 			newButtons.push(
 				<button
-					data-testid="page-button"
 					key={i + 1}
 					onClick={() => this.handleClick(i)}
 				>{i + 1}</button>
@@ -63,8 +62,7 @@ class Articles extends React.Component {
 			if (this.state.pageData[i].title != null && this.state.pageData[i].title != '') {
 				newArticles.push(
 					<li 
-						key={i} 
-						data-testid="result-row"
+						key={i}
 					>{this.state.pageData[i].title}</li>
 				);
 			}
@@ -82,6 +80,7 @@ class Articles extends React.Component {
 		} else {
 			return (
 				<React.Fragment>
+					<h1>News Articles</h1>
 					<div className="pagination">
 						{this.state.buttons}
 					</div>

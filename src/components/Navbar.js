@@ -19,6 +19,9 @@ const Navbar = () =>{
             <li>
                 <Link to='/articles'>News Articles API Call</Link>
             </li>
+            <li>
+                <Link to='/employees'>Employee List Filtering</Link>
+            </li>
         </ul>
       </nav>
     )

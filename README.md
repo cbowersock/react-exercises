@@ -1,4 +1,4 @@
-Various React exercises from Hackerrank, etc.
+React excercises from the React section on [HackerRank](https://www.hackerrank.com/domains/reactjs)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
