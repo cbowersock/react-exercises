@@ -1,17 +1,37 @@
-import React, { Component } from 'react';
-import './index.css';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./index.css";
 
-import TextEditor from './components/TextEditor';
-import Translator from './components/Translator';
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+
+import TextEditor from "./components/TextEditor";
+import Translator from "./components/Translator";
 
 class App extends Component {
   render() {
-      const {translations} = this.props;
+    const { translations } = this.props;
     return (
-      <div className="App">
-        <TextEditor />
-        <Translator translations={translations}/>
-      </div>
+      <Router>
+        <div className="App">
+            <Navbar/>
+            <div className="container">
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route
+                        exact
+                        path="/translator"
+                        render={ () =>
+                        <Fragment>
+                            <Translator translations={translations}/>                        
+                        </Fragment>
+                        }
+                    />
+                    <Route exact path="/texteditor" component={TextEditor}/>
+                </Switch>
+            </div>
+        </div>
+      </Router>
     );
   }
 }
