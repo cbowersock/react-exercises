@@ -1,5 +1,7 @@
 React excercises from the React section on [HackerRank](https://www.hackerrank.com/domains/reactjs)
 
+Compiled all exercises into one SPA to practice React Router.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
