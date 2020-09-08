@@ -22,6 +22,9 @@ const Navbar = () =>{
             <li>
                 <Link to='/employees'>Employee List Filtering</Link>
             </li>
+            <li>
+                <Link to='/cycle'>Cycle Counter</Link>
+            </li>
         </ul>
       </nav>
     )

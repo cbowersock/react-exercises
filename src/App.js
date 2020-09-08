@@ -9,6 +9,7 @@ import TextEditor from "./components/TextEditor";
 import Translator from "./components/Translator";
 import Articles from "./components/Articles";
 import EmployeesList from "./components/EmployeesList"
+import CycleCounter from "./components/CycleCounter";
 
 import {TRANSLATIONS, EMPLOYEES} from "./dummyData"
 
@@ -41,6 +42,7 @@ class App extends Component {
                     />
                     <Route exact path="/texteditor" component={TextEditor}/>
                     <Route exact path="/articles" component={Articles}/>
+                    <Route exact path="/cycle" component={CycleCounter}/>
                 </Switch>
             </div>
         </div>

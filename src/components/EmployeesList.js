@@ -38,7 +38,7 @@ class EmployeesList extends React.Component {
 		const { employees } = this.props;
 		employees.forEach(employee => {
 			newEmployees.push(
-				<li key={employee.name} data-testid="employee">
+				<li key={employee.name}>
 					{employee.name}
 				</li>
 			);
@@ -56,7 +56,6 @@ class EmployeesList extends React.Component {
 					<input
 						type="text"
 						className="filter-input"
-						data-testid="filter-input"
 						onChange={this.handleChange}
 						value={this.state.value}
 					/>
