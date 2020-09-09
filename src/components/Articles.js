@@ -26,19 +26,24 @@ class Articles extends React.Component {
 			.then(this.createArticles)
 	}
 
-	handleClick = id => {
+	handleClick = async id => {
 		this.setState({
 			isLoaded: false,
 		});
-		fetch(`https://jsonmock.hackerrank.com/api/articles?page=${id + 1}`)
-			.then(res => res.json())
-			.then(json => {
-				this.setState({
-					pageData: json.data,
-					isLoaded: true,
-				});
+
+		try {
+			const res = await fetch(`https://jsonmock.hackerrank.com/api/articles?page=${id + 1}`)
+			const json = await res.json()
+	
+			this.setState({
+				pageData: json.data,
+				isLoaded: true
 			})
-			.then(this.createArticles)
+	
+			this.createArticles()
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	createButtons = () => {
